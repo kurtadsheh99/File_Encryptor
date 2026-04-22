@@ -1,0 +1,17 @@
+# Extracted build artifacts (already stored in sources.zip)
+sources/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Build output
+dist/
+build/
+*.spec

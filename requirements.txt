@@ -1,0 +1,11 @@
+# Core cryptography — was 40.0.2 (had multiple CVEs); upgraded to 46.0.7
+cryptography>=46.0.7
+
+# AES/padding primitives — version embedded in binary was unknown; pinned to latest
+pycryptodome>=3.23.0
+
+# Build toolchain — was 65.5.0; upgraded to 75.x
+setuptools>=75.8.2
+
+# Packaging (optional, for building the exe)
+pyinstaller>=6.19.0

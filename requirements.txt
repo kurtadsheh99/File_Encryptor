@@ -1,0 +1,8 @@
+# Minimum safe versions for rebuilding File_Encrypt.exe.
+# These floors close the CVEs documented in SECURITY.md.
+# Pin higher (or remove the upper bound below) once the rebuild is validated.
+
+cryptography>=44.0.1
+pycryptodome>=3.21.0
+setuptools>=70.0.0
+pyinstaller>=6.10.0

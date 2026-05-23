@@ -1,0 +1,21 @@
+# Runtime dependencies for File_Encryptor.
+#
+# Pinned to versions that resolve every known CVE that affected the
+# bundled copies in the originally published File_Encrypt.exe (built
+# April 2023 with cryptography 40.0.2 and OpenSSL 1.1.1, both end-of-life).
+#
+# Build target: Python 3.11.9 or newer (3.12.x recommended).
+#
+# To install:
+#   python -m pip install --upgrade pip
+#   python -m pip install -r requirements.txt
+
+# AES + Fernet primitives used by File_Encrypt.py
+cryptography>=44.0.1        # >=42.0.4 closes CVE-2024-26130; 44.0.1 is current
+pycryptodome>=3.20.0        # provides Crypto.Cipher.AES, Crypto.Util.Padding
+
+# Pulled in transitively by cryptography, pinned to a patched release
+cffi>=1.17.1
+
+# Build-only tooling (used by BUILDING.md, not at runtime)
+pyinstaller>=6.11.1         # >=6.0 supports modern Python and signed bootloaders

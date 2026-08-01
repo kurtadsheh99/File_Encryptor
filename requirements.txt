@@ -1,0 +1,16 @@
+# Pinned minimum versions for File_Encryptor rebuilds.
+#
+# The runtime dependencies observed inside the current File_Encrypt.exe
+# (extracted from sources.zip / PyInstaller Analysis) are cryptography,
+# pycryptodome, cffi (and its transitive pycparser). setuptools is pulled
+# in by PyInstaller's bootstrap and is pinned here so any rebuild picks
+# a version whose known CVEs are fixed.
+#
+# The floors below are chosen so that every published advisory affecting
+# the currently shipped versions is patched.
+
+cryptography>=44.0.1
+pycryptodome>=3.20.0
+cffi>=1.17.1
+pycparser>=2.22
+setuptools>=78.1.1

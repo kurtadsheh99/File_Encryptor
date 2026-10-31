@@ -1,0 +1,20 @@
+# File_Encryptor runtime dependencies.
+#
+# These minimum versions pin out all CVEs reported for the dependencies that
+# were bundled into the previously-shipped File_Encrypt.exe (built with
+# cryptography 40.0.2, pycryptodome 3.17, setuptools 65.5.0, jinja2 3.1.2).
+#
+# Rebuild the executable from source with these versions so the shipped
+# binary no longer contains the vulnerable copies.
+
+cryptography>=46.0.6
+pycryptodome>=3.21.0
+setuptools>=84.1.0
+jinja2>=3.1.6
+cffi>=1.17.1
+markupsafe>=3.0.2
+pycparser>=2.22
+packaging>=24.2
+
+# Build-time only (PyInstaller + its hooks ship with the frozen app).
+pyinstaller>=6.11.1
